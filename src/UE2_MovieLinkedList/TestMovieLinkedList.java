@@ -16,7 +16,7 @@ public class TestMovieLinkedList
         System.out.println();
     }
 
-    public static void main(String[] args)
+    /*public static void main(String[] args)
     {
         MovieLinkedList movieLinkedList = new MovieLinkedList();
 
@@ -26,7 +26,7 @@ public class TestMovieLinkedList
 
         printLinkedList(movieLinkedList);
 
-        movieLinkedList.insertMovieTitleAtIndex("Forrest Gump", 9);
+        movieLinkedList.insertMovieTitleAtIndex("Forrest Gump", 3);
 
         printLinkedList(movieLinkedList);
 
@@ -35,7 +35,7 @@ public class TestMovieLinkedList
         foundNode = movieLinkedList.getMovieAtIndex(0);
         System.out.println( foundNode != null ? foundNode.getMovieTitle() : "null");
 
-        foundNode = movieLinkedList.getMovieAtIndex(25);
+        foundNode = movieLinkedList.getMovieAtIndex(2);
         System.out.println( foundNode != null ? foundNode.getMovieTitle() : "null");
 
         movieLinkedList.deleteMovieAtIndex(1);
@@ -50,5 +50,19 @@ public class TestMovieLinkedList
         movieLinkedList.deleteMovieAtIndex(1);
         movieLinkedList.deleteMovieAtIndex(0);
         printLinkedList(movieLinkedList);
+    }*/
+    public static void main(String[] args) {
+        MovieLinkedList movieLinkedList = new MovieLinkedList();
+
+        movieLinkedList.insertMovieTitleAtIndex("Inception", 0);
+        movieLinkedList.insertMovieTitleAtIndex("Die Verurteilten", 1);
+        movieLinkedList.insertMovieTitleAtIndex("Ziemlich beste Freunde", 2);
+
+        printLinkedList(movieLinkedList);
+
+        movieLinkedList.insertMovieTitleAtIndex("Forrest Gump", 3);
+
+        printLinkedList(movieLinkedList);
+
     }
 }

@@ -3,35 +3,32 @@ package UE1_TodoLinkedList;
 public class Node
 {
     // *** Membervariablen ***
+    private String todoText;
+    private Node next;
 
     // *** Konstruktor (optional) ***
 
-    public Node(String todoText)
-    {
-        // Implementierung offen
+    public Node(String todoText) {
+        this.todoText = todoText;
+        this.next = null;
     }
+
 
     // *** Getter- & Setter ***
 
-    public void setTodoText(String todoText)
-    {
-        // Implementierung offen
+    public String getTodoText() {
+        return todoText;
     }
 
-    public String getTodoText()
-    {
-        // Implementierung offen
-        return null;
+    public void setTodoText(String todoText) {
+        this.todoText = todoText;
     }
 
-    public void setNext(Node next)
-    {
-        // Implementierung offen
+    public Node getNext() {
+        return next;
     }
 
-    public Node getNext()
-    {
-        // Implementierung offen
-        return null;
+    public void setNext(Node next) {
+        this.next = next;
     }
 }
