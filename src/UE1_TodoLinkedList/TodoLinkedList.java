@@ -64,9 +64,28 @@ public class TodoLinkedList
     }
 
     public String getTodoTextAtIndex(int index)
-    {
-        // Implementierung offen
-        return null;
+    {//Wir suchen die Daten des Koten an einem bestimmeten Punkt, wir müssen also zählen an welcher Stelle wir uns befinden
+        //zum Start wird der Counter auf 0 gesetzt (=erste Position in Linked List)
+       int counter = 0;
+       //Wir haben den aktuellen Knoten, den wir betrachten und beginnen beim ersten Knoten in der Liste
+       Node currentNode = first;
+
+      // Falls die Liste leer ist (first = null) können wir nicht in linked list weiter gehen und
+        // ist das erste Element nicht null, schauen wir ob wir bereits gesuchte die Position erreicht haben (counter = index)
+        //wenn wir noch nicht beim Index-Knoten sind (counter<index) dann gehen wir zum nächsten Knoten
+       while (counter<index && currentNode != null){
+           counter++;
+           currentNode = currentNode.getNext();
+       }
+       //wenn wir jetzt beim Indexknoten angekommen sind (wir gehen nicht mehr in Schleife, sondern weiter)
+        //muss geschaut werden, ob der aktuelle Knoten einen Wert hat. Wenn nicht kann das zwei gründe haben: Es handelt sich um eine leere liste
+        //oder ob wir haben den Index nicht gefunden, also bereits die komplette Liste durchlaufen (Indexzahl zu groß)
+       if(currentNode == null)
+           return null;
+       //wenn also alle Randbedingungen berücksichtigt wurden (lerre Liste, Liste mit einem Element, Index zu groß), köönen Daten aus
+        //Knoten mit der gesuchten Indexzahl zurückgegeben werden
+       return currentNode.getTodoText();
+
     }
 
     // Bereits vorhandene Methode
